@@ -4,12 +4,9 @@
 library("SNPolisher")
 library("methods") #otherwise Rscript complains that function "is" is not found
 
-args = commandArgs(trailingOnly=TRUE)
-
-ps2snp=args[1]
-analysis_dir=args[2]
-call_threshold=as.numeric(args[3])
-
+ps2snp="IStraw90.r1.ps2snp_map.ps"
+call_threshold=as.numeric(Sys.getenv("POLISH_CALL_THRESHOLD"))
+analysis_dir=Sys.getenv("ISTRAW90_DIR")
 varz=3
 clustermin=5
 
